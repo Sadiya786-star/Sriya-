@@ -6,84 +6,117 @@
   <title>Memory Lane ✨</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #e0ffe0, #c8e6c9); /* pastel green */
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow-x: hidden;
-    }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #e0ffe0, #c8e6c9); /* pastel green */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+  }
 
+  h1 {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    color: #2e7d32;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .carousel {
+    margin: 2rem auto;
+    width: 95%;
+    max-width: 1000px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 1.5rem;
+  }
+
+  .carousel-item {
+    flex-shrink: 0;
+    width: 280px;
+    max-width: 90vw;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+  }
+
+  .caption {
+    padding: 1rem;
+    font-size: 1rem;
+    color: #33691e;
+    font-style: italic;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .nav button,
+  .next-page {
+    padding: 0.8rem 1.8rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #a5d6a7, #81c784);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+    transition: 0.3s ease;
+  }
+
+  .next-page {
+    margin: 2rem auto;
+    display: block;
+  }
+
+  .nav button:hover,
+  .next-page:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
     h1 {
-      margin-top: 2rem;
-      font-size: 2.5rem;
-      color: #2e7d32;
-      text-align: center;
-      font-family: 'Dancing Script', cursive;
-    }
-
-    .carousel {
-      margin: 3rem auto;
-      width: 90%;
-      max-width: 1000px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      gap: 2rem;
-    }
-
-    .carousel-item {
-      min-width: 280px;
-      max-width: 300px;
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      overflow: hidden;
-      text-align: center;
-    }
-
-    .carousel-item img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-bottom: 1px solid #eee;
+      font-size: 2rem;
+      margin-top: 1.5rem;
     }
 
     .caption {
-      padding: 1rem;
-      font-size: 1rem;
-      color: #33691e;
-      font-style: italic;
+      font-size: 0.9rem;
     }
 
-    .nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-
-    .nav button, .next-page {
-      padding: 0.8rem 1.8rem;
-      font-size: 1.1rem;
-      font-weight: bold;
-      margin-top: 1rem;
-    }
-
+    .nav button,
     .next-page {
-      display: block;
-      margin: 3rem auto 2rem;
+      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
     }
-  </style>
+  }
+</style>
+
 </head>
 <body>
 

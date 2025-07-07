@@ -6,99 +6,116 @@
   <title>Letter from Sadiya 💌</title>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    body {
-      margin: 0;
-      padding: 2rem;
-      font-family: 'Dancing Script', cursive;
-      background: linear-gradient(to bottom right, #ffe0f0, #e0f7ff);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      overflow-x: hidden;
-      position: relative;
-    }
+  body {
+    margin: 0;
+    padding: 2rem;
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(to bottom right, #ffe0f0, #e0f7ff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+  }
 
+  .letter {
+    max-width: 850px;
+    width: 90%;
+    background: #fff8f8;
+    border-radius: 30px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+    font-size: 1.2rem;
+    color: #6a1b9a;
+    line-height: 1.8;
+    animation: fadeIn 1.2s ease;
+    backdrop-filter: blur(4px);
+    overflow-y: auto;
+    max-height: 90vh;
+  }
+
+  .letter h2 {
+    text-align: center;
+    color: #d63384;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .letter::before {
+    content: \"💌\";
+    font-size: 3rem;
+    position: absolute;
+    top: -30px;
+    left: 20px;
+  }
+
+  .next-button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #f48fb1, #ce93d8);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .next-button:hover {
+    transform: scale(1.05);
+  }
+
+  .floating-heart {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: pink;
+    border-radius: 50%;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.7;
+  }
+
+  @keyframes floatUp {
+    0% {
+      bottom: -20px;
+      opacity: 0;
+      transform: translateX(0) scale(0.5);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      bottom: 100%;
+      opacity: 0;
+      transform: translateX(-20px) scale(1);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* 📱 Responsive for Mobile */
+  @media (max-width: 768px) {
     .letter {
-      max-width: 800px;
-      background: #fff8f8;
-      border-radius: 30px;
-      padding: 3rem;
-      box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
-      position: relative;
-      font-size: 1.2rem;
-      color: #6a1b9a;
-      line-height: 1.8;
-      animation: fadeIn 1.2s ease;
-      backdrop-filter: blur(4px);
-    }
-
-    .letter::before {
-      content: "💌";
-      font-size: 3rem;
-      position: absolute;
-      top: -30px;
-      left: 20px;
+      padding: 2rem;
+      font-size: 1rem;
     }
 
     .letter h2 {
-      text-align: center;
-      color: #d63384;
-      font-size: 2.2rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
     }
 
     .next-button {
-      margin-top: 3rem;
-      padding: 1rem 2rem;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 30px;
-      background: linear-gradient(45deg, #f48fb1, #ce93d8);
-      color: white;
-      cursor: pointer;
-      box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
-      transition: all 0.3s ease;
+      font-size: 1rem;
+      padding: 0.8rem 1.5rem;
     }
+  }
+</style>
 
-    .next-button:hover {
-      transform: scale(1.05);
-      background: linear-gradient(45deg, #ec407a, #ab47bc);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Floating hearts */
-    .floating-heart {
-      position: absolute;
-      width: 15px;
-      height: 15px;
-      background: pink;
-      border-radius: 50%;
-      animation: floatUp 6s linear infinite;
-      opacity: 0.7;
-    }
-
-    @keyframes floatUp {
-      0% {
-        bottom: -20px;
-        opacity: 0;
-        transform: translateX(0) scale(0.5);
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        bottom: 100%;
-        opacity: 0;
-        transform: translateX(-20px) scale(1);
-      }
-    }
-  </style>
 </head>
 <body>
 
